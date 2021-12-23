@@ -17,15 +17,7 @@ echo $"
 ###############################
 #    Define worker functions  #
 ###############################
-versionChecker() {
-	local v1=$1; local v2=$2;
-	while [ `echo $v1 | egrep -c [^0123456789.]` -gt 0 ]; do
-		char=`echo $v1 | sed 's/.*\([^0123456789.]\).*/\1/'`; char_dec=`echo -n "$char" | od -b | head -1 | awk {'print $2'}`; v1=`echo $v1 | sed "s/$char/.$char_dec/g"`; done
-	while [ `echo $v2 | egrep -c [^0123456789.]` -gt 0 ]; do
-		char=`echo $v2 | sed 's/.*\([^0123456789.]\).*/\1/'`; char_dec=`echo -n "$char" | od -b | head -1 | awk {'print $2'}`; v2=`echo $v2 | sed "s/$char/.$char_dec/g"`; done
-	v1=`echo $v1 | sed 's/\.\./.0/g'`; v2=`echo $v2 | sed 's/\.\./.0/g'`;
-	checkVersion "$v1" "$v2"
-}
+
 
 checkVersion() {
 	[ "$1" == "$2" ] && return 1
