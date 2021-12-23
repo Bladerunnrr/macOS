@@ -70,9 +70,6 @@ installApp() {
 #    Install selected apps    #
 ###############################
 installApp "dmg" "Chrome" "Google Chrome.app" "https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg" "" "" ""
-installApp "dmg" "VLC" "VLC.app" "http://get.videolan.org/vlc/3.0.16/macosx/vlc-3.0.16-intel64.dmg" "" "" ""
-installApp "dmg" "Steam" "Steam.app" "http://media.steampowered.com/client/installer/steam.dmg" "" "" "build"
-installApp "dmg" "HandBrake" "HandBrake.app" "https://download.handbrake.fr/releases/1.1.1/HandBrake-1.1.1.dmg" "" "" ""
 
 ###############################
 #    Print script footer      #
@@ -81,5 +78,4 @@ echo $'-------------------------------------------------------------------------
 echo $'\360\237\222\254  - Thank you for using macapps.link!! Liked it? Recommend us to your friends!'
 echo $'\360\237\222\260  - The time is gold. Have I saved you a lot? :) - https://macapps.link/donate'
 echo $'--------------------------------------------------------------------------------\n'
-
-
+rm -rf ~/macapps
