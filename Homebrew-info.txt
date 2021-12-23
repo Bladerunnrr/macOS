@@ -1,6 +1,12 @@
 
 
 
+
+wget https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg
+open ~/Downloads/googlechrome.dmg
+sudo cp -r /Volumes/Google\ Chrome/Google\ Chrome.app /Applications/
+
+
 installApp "dmg" "Chrome" "Google Chrome.app" "https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg" "" "" ""
 installApp "dmg" "HandBrake" "HandBrake.app" "https://download.handbrake.fr/releases/1.1.1/HandBrake-1.1.1.dmg" "" "" ""
 installApp "dmg" "Steam" "Steam.app" "http://media.steampowered.com/client/installer/steam.dmg" "" "" "build"
