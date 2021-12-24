@@ -107,12 +107,13 @@ ls -l /usr/local/opt/
 MacOS Homebrew apps
 
 
+brew install cmatrix
 brew install htop
 brew install neofetch
+brew install wget
 
 brew install --cask handbrake
 brew install --cask qbittorrent
 brew install --cask obs
 brew install --cask vlc
-
 
