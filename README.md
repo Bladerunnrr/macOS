@@ -18,6 +18,7 @@ chmod +x macapps-link.sh or chmod 755 macapps-link.sh
 Pipe run using curl:
 
 To install selected apps, copy and paste this command into a Terminal...
+
 ...hit Enter and wait for your apps to be installed!
 
 curl 'https://raw.githubusercontent.com/Bladerunnrr/macOS/main/macapps-link.sh' | sh
