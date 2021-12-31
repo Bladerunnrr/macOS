@@ -1,4 +1,4 @@
-#macOS
+# macOS
 macOS
 
 Install Google Chrome | Steam | HandBrake | VLC | OBS Studio using macapps.link sh - https://macapps.link/
