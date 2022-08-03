@@ -1,0 +1,31 @@
+
+
+
+Parallels Fix Networking Intel Monterrey
+
+
+Edit: /Library/Preferences/Parallels/network.desktop.xml
+
+Change lines to …:
+
+Line 3:
+0
+
+Line 5:
+0
+
+<?xml version="1.0" encoding="UTF-8"?>
+<ParallelsNetworkConfig dyn_lists="VirtualNetworks 1" schemaVersion="1.0">
+   <SystemFlags>0</SystemFlags>
+   <IPv6Enabled>1</IPv6Enabled>
+   <UseKextless>0</UseKextless>
+
+
+
+Allow R&W permissions Parallels folder - /Library/Preferences/Parallels and/or etwork.desktop.xml
+
+
+Windows 10 Pro Key from Dell PC
+
+HVBQT-3FDDX-9G4VJ-7MJ8G-JXF22
+
