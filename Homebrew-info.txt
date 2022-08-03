@@ -1,0 +1,203 @@
+
+
+macOS Monterey Homebrew manual installation in a different directory.
+
+https://itectec.com/superuser/how-should-i-install-homebrew-into-usr-local-subdirectory-manually/
+
+
+# Make temp install directory
+
+sudo mkdir /usr/local/brewtmp1
+
+# $USER is your current account name with Admin Priv...
+
+sudo chown $USER:admin /usr/local/brewtmp1
+
+ls -l /usr/local
+
+cd /usr/local/brewtmp1
+
+curl -L https://github.com/Homebrew/brew/tarball/master | tar xz
+
+ls -l /usr/local/brewtmp1/Homebrew-brew-*
+
+mv Homebrew-brew-* homebrew
+
+sudo mv /usr/local/brewtmp1/homebrew /usr/local
+
+# Add the following path to .bash_profile or .zprofile
+
+export PATH=/usr/local/homebrew/bin:$PATH
+
+cd /usr/local
+
+sudo rm -rf /usr/local/brewtmp1
+
+which brew
+
+brew update
+
+brew install htop
+brew install cmatrix
+brew install neofetch
+
+brew install --cask google-chrome
+brew install --cask handbrake
+brew install --cask obs
+brew install --cask qbittorrent
+brew install --cask steam
+brew install --cask vlc
+
+cd /Applications
+mkdir Homebrew
+
+mv "/Applications/Google Chrome.app" "/Applications/Homebrew"
+mv "/Applications/HandBrake.app" "/Applications/Homebrew"
+mv "/Applications/OBS.app" "/Applications/Homebrew"
+mv "/Applications/qBittorrent.app" "/Applications/Homebrew"
+mv "/Applications/Steam.app" "/Applications/Homebrew"
+mv "/Applications/VLC.app" "/Applications/Homebrew"
+
+brew upgrade --cask google-chrome
+brew upgrade --cask handbrake
+brew upgrade --cask obs
+brew upgrade --cask qbittorrent
+brew upgrade --cask steam
+brew upgrade --cask vlc
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Macapp-links
+
+
+wget https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg
+open ~/Downloads/googlechrome.dmg
+sudo cp -r /Volumes/Google\ Chrome/Google\ Chrome.app /Applications/
+
+
+#/bin/bash
+clear && rm -rf ~/macapps && mkdir ~/macapps > /dev/null && cd ~/macapps
+
+installApp "dmg" "Chrome" "Google Chrome.app" "https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg" "" "" ""
+installApp "dmg" "HandBrake" "HandBrake.app" "https://download.handbrake.fr/releases/1.1.1/HandBrake-1.1.1.dmg" "" "" ""
+installApp "dmg" "Steam" "Steam.app" "http://media.steampowered.com/client/installer/steam.dmg" "" "" "build"
+installApp "dmg" "VLC" "VLC.app" "http://get.videolan.org/vlc/3.0.16/macosx/vlc-3.0.16-intel64.dmg" "" "" ""
+installApp "dmg" "OBS Studio" "OBS Studio.app" "https://cdn-fastly.obsproject.com/downloads/obs-mac-27.1.3.dmg" "" "" ""
+
+# Examples
+# installApp "zip" "Chromium" "Chromium.app" "https://download-chromium.appspot.com/dl/Mac" "chrome-mac/" "" ""
+# installApp "zip" "GitHub" "GitHub Desktop.app" "https://central.github.com/deployments/desktop/desktop/latest/darwin" "" "" ""
+# installApp "tar" "FileZilla" "FileZilla.app" "https://download.filezilla-project.org/client/FileZilla_latest_macosx-x86.app.tar.bz2" "" "" ""
+# installApp "dmg" "Firefox" "Firefox.app" "http://download.mozilla.org/?product=firefox-latest&os=osx&lang=en-US" "" "" ""
+# installApp "dmg" "SublimeText" "Sublime Text.app" "https://download.sublimetext.com/sublime_text_build_4126_mac.zip" "" "" ""
+# installApp "zip" "Visual Studio Code" "Visual Studio Code.app" "http://go.microsoft.com/fwlink/?LinkID=620882" "" "" ""
+# installApp "zip" "iTerm2" "iTerm.app" "https://iterm2.com/downloads/stable/latest" "" "" ""
+# installApp "zip" "Cyberduck" "Cyberduck.app" "https://update.cyberduck.io/Cyberduck-4.6.zip" "" "" ""
+# installApp "dmg" "KeePassX" "KeePassX.app" "http://www.keepassx.org../releases/2.0.3/KeePassX-2.0.3.dmg" "" "" ""
+# installApp "dmg" "Etcher" "Etcher.app" "https://github.com/balena-io/etcher/releases/download/v1.5.45/balenaEtcher-1.5.45.dmg" "" "" ""
+# installApp "dmg" "VLC" "VLC.app" "http://get.videolan.org/vlc/3.0.16/macosx/vlc-3.0.16-intel64.dmg" "" "" ""
+# installApp "dmg" "GIMP" "Gimp-2.10.app" "http://download.gimp.org/mirror/pub/gimp/v2.10/osx/gimp-2.10.30-x86_64.dmg" "" "" ""
+# installApp "dmg" "Steam" "Steam.app" "http://media.steampowered.com/client/installer/steam.dmg" "" "" "build"
+# installApp "dmg" "Kodi" "Kodi.app" "http://mirrors.kodi.tv/releases/osx/x86_64/kodi-18.8-Leia-x86_64.dmg" "" "" ""
+# installApp "zip" "Plex" "Plex Media Player.app" "https://downloads.plex.tv/plexmediaplayer/2.58.0.1076-38e019da/PlexMediaPlayer-2.58.0.1076-38e019da-macosx-x86_64.zip" "" "" ""
+# installApp "dmg" "HandBrake" "HandBrake.app" "https://download.handbrake.fr/releases/1.1.1/HandBrake-1.1.1.dmg" "" "" ""
+# installApp "dmg" "Skype" "Skype.app" "http://www.skype.com/go/getskype-macosx.dmg" "" "" ""
+# installApp "dmg" "Slack" "Slack.app" "https://slack.com/ssb/download-osx" "" "" ""
+# installApp "dmg" "WhatsApp" "WhatsApp.app" "https://web.whatsapp.com/desktop/mac/files/WhatsApp.dmg" "" "" ""
+# installApp "dmg" "Discord" "Discord.app" "https://discordapp.com/api/download?platform=osx" "" "" ""
+
+
+
+Mac OS Apps
+
+Google Chrome (get from Website or use macapps.link sh)
+FileZilla (get from Website)
+qBittorrent (get from Website)
+Steam (get from Website or use macapps.link sh)
+VLC media player (get from Website or use macapps.link sh)
+Microsoft Remote Desktop 10 (get from App Store)
+
+
+https://reqbin.com/req/curl/c-skhwmiil/curl-flags
+
+curl -s 'https://api.macapps.link/en/chrome-handbrake-steam-vlc' | sh
+
+https://www.fosshub.com/qBittorrent.html?dwl=qbittorrent-4.3.9.dmg
+https://www.keepassx.org/releases/2.0.3/KeePassX-2.0.3.dmg
+
+
+pkgutil --pkg-info=com.apple.pkg.CLTools_Executables 
+
+
+# https://stackoverflow.com/questions/41840479/how-to-use-homebrew-on-a-multi-user-macos-sierra-setup
+
+xcode-select --install
+
+cd $HOME
+mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
+echo 'export PATH="$HOME/homebrew/bin:$PATH"' >> .zprofile
+
+brew doctor
+
+
+# https://docs.brew.sh/Installation#untar-anywhere
+
+xcode-select --install
+
+mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
+
+eval "$(homebrew/bin/brew shellenv)"
+brew update --force --quiet
+chmod -R go-w "$(brew --prefix)/share/zsh"
+
+
+
+
+Uninstall Homebrew by using the following command: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall.sh)"
+
+Reinstall Homebrew with the following command: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+
+
+This one command will uninstall all the packages install through Homebrew.
+brew remove --force $(brew list) --ignore-dependencies
+
+To remove unused archives run.
+brew cleanup
+
+To remove Cask packages
+brew cask remove --force $(brew cask list)
+
+
+
+Remove Visual Studio Code on macOS completely
+
+How to clean uninstall VSCode on macOS
+
+Delete these files and folders:
+/Applications/Visual Studio Code.app
+~/Library/Application Support/Code
+~/Library/Application Support/Code-Insider
+~/Library/Saved Application State/com.microsoft.VSCode.savedState
+~/.vscode
+~/.vscode-insiders
+
+Open a terminal and run this command: rm -rf "/Applications/Visual Studio Code.app" "~/Library/Application Support/Code" "~/Library/Application Support/Code-Insider" "~/Library/Saved Application State/com.microsoft.VSCode.savedState" "~/.vscode" "~/.vscode-insiders"
+
+
+
+Where Homebrew Packages Are Installed on Mac OS: the Homebrew Installation Path
+By default, Homebrew will install all packages into the following directory in all versions of Mac OS:
+
+/usr/local/Cellar/
+
+Additionally, Homebrew places symlinks into the following directory path:
+
+/usr/local/opt/
+
+The symbolic links of binaries found in /usr/local/opt/ all point to their respective package in /usr/local/Cellar/ as can be confirmed with ls and the -l flag:
+
+ls -l /usr/local/opt/
+
